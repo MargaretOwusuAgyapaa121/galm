@@ -1,0 +1,136 @@
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+  background: #000;
+  padding-block: 90px;
+}
+
+/* ---------- WRAPPER ---------- */
+.about-wrapper {
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ---------- IMAGE SIDE ---------- */
+.about-image {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hover-img {
+  opacity: 0;
+}
+
+.about-image:hover .default-img {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.about-image:hover .hover-img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ---------- IMAGE OVERLAY ---------- */
+.image-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.text-default {
+  transition: opacity 0.4s ease;
+}
+
+.text-hover {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.read-more {
+  padding: 10px 26px;
+  background: #f59e0b;
+  color: #000;
+  font-weight: 600;
+  border-radius: 22px;
+}
+
+/* ---------- HOVER SWITCH ---------- */
+.about-image:hover .text-default {
+  opacity: 0;
+}
+
+.about-image:hover .text-hover {
+  opacity: 1;
+}
+
+/* ---------- TEXT SIDE (VERTICAL FLOW) ---------- */
+.about-content {
+  max-width: 520px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 28px;
+}
+
+.about-content p {
+  color: #e6e6e6;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.about-content p + p {
+  margin-top: 18px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    padding-top: 30px;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 380px;
+    height: 460px;
+  }
+}

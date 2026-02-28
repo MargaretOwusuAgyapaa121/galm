@@ -1,0 +1,122 @@
+/* =========================================================
+   MAIN.CSS — GLOBAL RESET & LAYOUT FOUNDATION
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- HTML & BODY ---------- */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- ROOT APP WRAPPER ---------- */
+#root,
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- SECTION ---------- */
+section {
+  width: 100%;
+  position: relative;
+}
+
+/* ---------- CONTAINER (STANDARD) ---------- */
+/* Use ONLY when you want horizontal spacing */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* ---------- FLEX UTILITIES ---------- */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- RESPONSIVE STACK ---------- */
+.stack-on-mobile {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .stack-on-mobile {
+    flex-direction: column;
+  }
+}
+
+/* ---------- MEDIA SAFETY ---------- */
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+p {
+  font-size: 1rem;
+}
+
+/* ---------- LINK & BUTTON ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ---------- SCROLLBAR (OPTIONAL POLISH) ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}

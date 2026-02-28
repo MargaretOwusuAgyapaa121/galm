@@ -1,0 +1,164 @@
+.registration-page {
+  background: #ffffff;
+  color: #000;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+.registration-header {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.small-title {
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+.registration-header h1 {
+  font-size: 48px;
+  margin: 10px 0 20px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* STEP INDICATOR */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.step.active {
+  background: #000;
+  color: #fff;
+}
+
+.line {
+  width: 80px;
+  height: 2px;
+  background: #000;
+}
+
+/* CONTENT */
+.registration-content {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* FORM */
+.form-section {
+  flex: 1;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.next-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.next-btn:hover {
+  background: #333;
+}
+
+/* INQUIRIES */
+.inquiry-section {
+  flex: 1;
+  border-left: 1px solid #eee;
+  padding-left: 40px;
+}
+
+.inquiry-section h2 {
+  margin-bottom: 20px;
+}
+
+.inquiry-section p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* SECOND STEP */
+.second-step {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .registration-content {
+    flex-direction: column;
+  }
+
+  .inquiry-section {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

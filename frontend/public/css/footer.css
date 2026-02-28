@@ -1,0 +1,131 @@
+.galm-footer {
+  background: linear-gradient(180deg, #0d0d0e, #0e0f0f);
+  color: #ffffff;
+  text-align: center;
+  padding-top: 70px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 720px;
+  margin: auto;
+  padding: 0 20px 60px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 160px;
+  justify-self: center;
+  margin-bottom: 30px;
+}
+
+/* Scripture */
+.footer-scripture {
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.footer-scripture span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-verse {
+  font-size: 14px;
+  font-style: italic;
+  color: #f59e0b; /* ORANGE */
+  margin-bottom: 35px;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.footer-social a {
+  color: #cbd5e1;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #f59e0b;
+  transform: translateY(-3px);
+}
+
+/* Call to action */
+.footer-cta {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.footer-cta-strong {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Form */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.footer-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.footer-form button {
+  padding: 12px;
+  background-color: #f59e0b; /* ORANGE */
+  color: #090909;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background-color: #fbbf24;
+}
+
+/* Privacy */
+.footer-privacy {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 15px;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 130px;
+  }
+
+  .footer-cta-strong {
+    font-size: 20px;
+  }
+}

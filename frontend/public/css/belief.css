@@ -1,0 +1,183 @@
+/* ===============================
+   BELIEF SECTION
+   =============================== */
+.belief-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 0%,  /* light at top */
+      rgba(0, 0, 0, 0.8) 100% /* dark at bottom */
+    ),
+    url("/assets/pv/background/bg6.jpg") center/cover no-repeat;
+}
+
+/* Gradient overlay: top light, bottom darker */
+.belief-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.55));
+  z-index: 1;
+}
+
+/* SLIDES CONTAINER */
+.slides-container {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* INDIVIDUAL SLIDE */
+.belief-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  color: #efefef;
+  max-width: 800px;
+  padding: 20px;
+  transition: opacity 1s ease-in-out;
+  z-index: 2;
+}
+
+/* ACTIVE SLIDE */
+.belief-slide.active {
+  opacity: 1;
+}
+
+/* SLIDE TEXT STYLING */
+.belief-title {
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #f7ac0b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.belief-highlight {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 12px;
+}
+
+.belief-text {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.belief-ref {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.belief-version {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+/* ===============================
+   CTA SECTION BELOW SLIDES
+   =============================== */
+.belief-cta-section {
+  /* background: #271010; */
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.cta-text {
+  font-size: 20px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.cta-button {
+  background-color: #f59e0b;
+  color: #000;
+  border: none;
+  padding: 14px 32px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   RESPONSIVE STYLING
+   =============================== */
+@media (max-width: 1024px) {
+  .belief-slide {
+    max-width: 700px;
+  }
+
+  .belief-highlight {
+    font-size: 30px;
+  }
+
+  .belief-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .belief-slide {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .belief-highlight {
+    font-size: 26px;
+  }
+
+  .belief-text {
+    font-size: 16px;
+  }
+
+  .cta-text {
+    font-size: 28px;
+  }
+
+  .cta-button {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .belief-highlight {
+    font-size: 22px;
+  }
+
+  .belief-text {
+    font-size: 14px;
+  }
+
+  .belief-ref {
+    font-size: 14px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
