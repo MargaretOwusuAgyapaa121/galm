@@ -27,17 +27,17 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
-                <span>173 Brush Street, Lancaster, MA 9900</span>
+                <span>173 Grove Street, Worcester MA 01605</span>
               </div>
 
               <div className="contact-item">
                 <FaPhoneAlt className="contact-icon" />
-                <span>+1 (234) 567-8900</span>
+                <span>(774) 502-9476</span>
               </div>
 
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />
-                <span>info@gloriousministry.org</span>
+                <span>info@galm16.com</span>
               </div>
             </div>
 
