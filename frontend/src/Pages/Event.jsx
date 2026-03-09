@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import Events from "../Components/Event";
+import Events from '../components/Event';
 
 const EventsSection = () => {
   const [play, setPlay] = useState(false);
