@@ -15,7 +15,7 @@ const Gallery = () => {
     "/assets/pv/gallery/g2.jpeg",
     "/assets/pv/gallery/g3.jpeg",
     "/assets/pv/gallery/g4.jpeg",
-     "/assets/pv/gallery/g5.jpg",
+    "/assets/pv/gallery/g5.jpg",
     "/assets/pv/gallery/g6.jpeg",
     "/assets/pv/gallery/g7.jpeg",
     "/assets/pv/gallery/g8.jpeg",
@@ -28,7 +28,7 @@ const Gallery = () => {
     "/assets/pv/img/galm10.jpeg",
     "/assets/pv/img/galm6.jpg",
     "/assets/pv/img/galm5.jpeg",
-     "/assets/pv/gallery/g5.jpg",
+    "/assets/pv/gallery/g5.jpg",
     "/assets/pv/img/img8.jpeg",
     "/assets/pv/img/galm10.jpeg",
     "/assets/pv/img/galm6.jpg",
@@ -97,11 +97,41 @@ const Gallery = () => {
       <section className="gallery-hero">
         <div className="hero-overlay" />
         <div className="hero-socials">
-          <FaFacebookF />
-          <FaWhatsapp />
-          <FaInstagram />
-          <FaYoutube />
-          <FaEnvelope />
+          <a
+            href="https://web.facebook.com/Anchorghalm/?_rdc=1&_rdr#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF size={20} />
+          </a>
+          <a
+            href="https://wa.me/+15082026458"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp size={20} />
+          </a>
+          <a
+            href="https://www.bing.com/ck/a?!&&p=c5e1b4586eef03f970bfe035e42962f4786937fac92eaa82ee5532cabe6ac347JmltdHM9MTc3MzAxNDQwMA&ptn=3&ver=2&hsh=4&fclid=0448689d-696a-63e9-1d9e-7eb868786247&psq=glourious+anchor+of+life&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9nbG9yaW91c2FuY2hvci9yZWVscy8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram size={20} />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=CKJogOqoEB0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaYoutube size={20} />
+          </a>
+          <a
+            href="mailto:info@galm16.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelope size={20} />
+          </a>
         </div>
 
         <div className="hero-content">

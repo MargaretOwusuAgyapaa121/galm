@@ -125,7 +125,10 @@ export default function Slider() {
       <div className="text-content">
         <h2 className="slider-title">Worship With Us</h2>
         <h3 className="slider-subtitle">Sunday Service @10am EST</h3>
-        <button className="watch-btn">
+        <button
+          className="watch-btn"
+          onClick={() => window.open("https://web.facebook.com/Anchorghalm/?_rdc=1&_rdr#", "_blank")}
+        >
           <FaFacebook size={18} style={{ marginRight: "8px" }} />
           Watch Live
         </button>
