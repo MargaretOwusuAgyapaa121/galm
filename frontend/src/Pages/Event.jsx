@@ -24,7 +24,6 @@ const EventsSection = () => {
 
         {/* RIGHT SIDE - VIDEO */}
         <div className="events-video">
-
           {!play ? (
             <div className="video-thumbnail" onClick={() => setPlay(true)}>
               <img
@@ -37,7 +36,7 @@ const EventsSection = () => {
             </div>
           ) : (
             <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+              src="https://www.youtube.com/embed/_LTBfpnYJoE?autoplay=1"
               title="Event Video"
               frameBorder="0"
               allow="autoplay; encrypted-media"
@@ -45,10 +44,11 @@ const EventsSection = () => {
             ></iframe>
           )}
 
+
         </div>
 
       </div>
-      <Events/>
+      <Events />
     </section>
   );
 };

@@ -17,18 +17,26 @@ const Navbar = () => {
       <div className="navbar-inner">
         {/* Left Logo */}
         <div className="nav-left">
-          <img src="/assets/pv/logo/icon2.png" alt="GALM Logo" className="navbar-logo" />
-        </div>
+  <Link to="/">
+    <img 
+      src="/assets/pv/logo/icon2.png" 
+      alt="GALM Logo" 
+      className="navbar-logo" 
+    />
+  </Link>
+</div>
 
         {/* Center Links */}
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a className="active" href="/">WELCOME</a>
-          <a href="/about">ABOUT US</a>
-          <a href="/service">SERVICES</a>
-          <a href="/events">OUR EVENTS</a>
-          <a href="/join">JOIN CLASS</a>
-          <a href="/gallery">GALLERY</a>
-          <a href="/contact">CONTACT US</a>
+          <Link to="/" className="active">
+            WELCOME
+          </Link>
+          <Link to="/about">ABOUT US</Link>
+          <Link to="/service">SERVICES</Link>
+          <Link to="/events">OUR EVENTS</Link>
+          <Link to="/join">JOIN CLASS</Link>
+          <Link to="/gallery">GALLERY</Link>
+          <Link to="/contact">CONTACT US</Link>
         </div>
 
         {/* Mobile Hamburger */}
