@@ -59,9 +59,9 @@ const Registration = () => {
           {/* GENERAL INQUIRIES */}
           <div className="inquiry-section">
             <h2>General Inquiries</h2>
-            <p><strong>Location:</strong> 173 Brush Street, Lancaster, MA 9900</p>
-            <p><strong>Phone:</strong> +1 555 555 5555</p>
-            <p><strong>Email:</strong> info@camsystem.org</p>
+            <p><strong>Location:</strong> 173 Grove Street, Worcester, MA 01605</p>
+            <p><strong>Phone:</strong> (774) 502-9476</p>
+            <p><strong>Email:</strong> info@galm16.com</p>
             <p>If you are looking for a church to worship, please contact us at zak@gmail.com</p>
           </div>
 

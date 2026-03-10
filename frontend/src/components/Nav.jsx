@@ -28,7 +28,7 @@ const Navbar = () => {
 
         {/* Center Links */}
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/" className="active">
+          <Link to="/" className="a">
             WELCOME
           </Link>
           <Link to="/about">ABOUT US</Link>

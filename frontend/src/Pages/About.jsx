@@ -39,6 +39,7 @@ export default function About() {
 
     return (
         <>
+            
             {/* HERO */}
             <section className="about-hero">
                 <div className="hero-overlay">
