@@ -1,6 +1,6 @@
 .registration-page {
   background: #ffffff;
-  color: #000;
+  color: #2b2a2a;
   padding: 60px 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -43,7 +43,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #312e2e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,14 +53,14 @@
 }
 
 .step.active {
-  background: #000;
+  background: #2c2b2b;
   color: #fff;
 }
 
 .line {
   width: 80px;
   height: 2px;
-  background: #000;
+  background: #3b3939;
 }
 
 /* CONTENT */
@@ -98,7 +98,7 @@
   margin-top: 30px;
   padding: 12px 30px;
   border: none;
-  background: #000;
+  background: #3a3737;
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease;

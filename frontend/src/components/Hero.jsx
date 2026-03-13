@@ -1,7 +1,24 @@
-import React from 'react';
-
+import React, { useState } from "react";
 
 const Home = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    fetch("/", {
+      method: "POST",
+      body: new FormData(form),
+    })
+      .then(() => {
+        setSubmitted(true); // show success message
+        form.reset(); // clear form
+      })
+      .catch((error) => alert("Error submitting form: " + error));
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-left">
@@ -18,7 +35,6 @@ const Home = () => {
           <h4 className="hero-online">Online</h4>
         </div>
 
-
         <a
           href="https://youtu.be/CKJogOqoEB0"
           target="_blank"
@@ -34,16 +50,31 @@ const Home = () => {
         <div className="join-church-form">
           <h3 className="join-title">Join the Church</h3>
           <p>We invite you to be a member today!</p>
-          <form>
-            <input type="text" placeholder="First Name" required />
-            <input type="email" placeholder="Email Address" required />
-            <input type="tel" placeholder="Phone Number" required />
-            <button type="submit">Submit</button>
-          </form>
+
+          {!submitted ? (
+            <form
+              name="join-church"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="join-church" />
+
+              <input name="firstName" type="text" placeholder="First Name" required />
+              <input name="email" type="email" placeholder="Email Address" required />
+              <input name="phone" type="tel" placeholder="Phone Number" required />
+
+              <button type="submit">Submit</button>
+            </form>
+          ) : (
+            <p style={{ color: "#f8eabe", marginTop: "20px", fontWeight: 500 }}>
+              ✅ Thank you! We received your info and will contact you soon.
+            </p>
+          )}
+
         </div>
       </div>
     </section>
-
   );
 };
 

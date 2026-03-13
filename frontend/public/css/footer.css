@@ -6,17 +6,23 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Content Layout */
 .footer-content {
   max-width: 720px;
   margin: auto;
   padding: 0 20px 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Logo */
 .footer-logo {
   width: 160px;
-  justify-self: center;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  display: block;
 }
 
 /* Scripture */
@@ -26,6 +32,7 @@
   line-height: 1.8;
   color: #cbd5e1;
   margin-bottom: 8px;
+  max-width: 600px;
 }
 
 .footer-scripture span {
@@ -36,7 +43,7 @@
 .footer-verse {
   font-size: 14px;
   font-style: italic;
-  color: #f59e0b; /* ORANGE */
+  color: #f59e0b;
   margin-bottom: 35px;
 }
 
@@ -44,6 +51,7 @@
 .footer-social {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 22px;
   margin-bottom: 40px;
 }
@@ -77,8 +85,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
   max-width: 400px;
-  margin: auto;
 }
 
 .footer-form input {
@@ -86,11 +94,12 @@
   border-radius: 6px;
   border: none;
   font-size: 14px;
+  width: 100%;
 }
 
 .footer-form button {
   padding: 12px;
-  background-color: #f59e0b; /* ORANGE */
+  background-color: #f59e0b;
   color: #090909;
   border: none;
   font-size: 15px;
@@ -98,6 +107,13 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 100%;
+}
+.footer-success {
+  margin-top: 20px;
+  color: #22c55e;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .footer-form button:hover {
@@ -116,7 +132,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 18px;
   font-size: 14px;
-  color: #ffffff;
+  color: #cbd5e1;
 }
 
 /* Responsive */
@@ -127,5 +143,9 @@
 
   .footer-cta-strong {
     font-size: 20px;
+  }
+
+  .footer-scripture {
+    font-size: 14px;
   }
 }
