@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://galm61.org/sitemap.xml
