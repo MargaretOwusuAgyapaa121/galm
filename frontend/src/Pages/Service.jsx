@@ -5,7 +5,7 @@ const ServicePage = () => {
   const services = [
     {
       title: "Glorious Service",
-      time: "10:00am -12:30 pm",
+      time: "10:00am -12:00 pm",
       highlight: "S U N D A Y  M A I N  S E R V I C E",
       description: [
         "GALM enters into the moment of worship.",
@@ -29,7 +29,7 @@ const ServicePage = () => {
     },
     {
       title: "PRAYER SERVICE",
-      time: "7:00pm - 9:00pm",
+      time: "7:00pm - 8:30pm",
       highlight: "F R I D A Y  A N C H O R  N I G H T  O F  P R A Y E R",
       description: [
         "Prayer is our life-line and lifestyle. We invite everyone to join us in one accord.",
