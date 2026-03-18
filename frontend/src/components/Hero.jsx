@@ -31,7 +31,7 @@ const Home = () => {
         </p>
 
         <div className="hero-titles">
-          <h3 className="hero-disciple">Disciple Class</h3>
+          <h3 className="hero-disciple">Discipleship Class</h3>
           <h4 className="hero-online">Online</h4>
         </div>
 

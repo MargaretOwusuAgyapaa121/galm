@@ -9,12 +9,14 @@ import Contact from "./Contact";
 import Gallery from "./Gallery";
 import Registration from "./Disciple";
 import Footer from "../components/Footer";
+import FlyerPopup from "../components/Flyer";
 import ErrorBoundary from "../components/Error";
 
 function App() {
   return (
     <ErrorBoundary>
       <Navbar />
+      <FlyerPopup />
 
       <Routes>
         <Route path="/" element={<Home />} />
