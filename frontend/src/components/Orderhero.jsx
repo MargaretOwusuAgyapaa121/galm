@@ -15,10 +15,10 @@ export default function HeroSection() {
           Fast, secure, and designed for a smooth experience.
         </p>
 
-        <div className="hero-buttons">
+        {/* <div className="hero-buttons">
           <button className="primary-btn">Start Order</button>
           <button className="secondary-btn">View Products</button>
-        </div>
+        </div> */}
 
         <div className="hero-stats">
           <div>
