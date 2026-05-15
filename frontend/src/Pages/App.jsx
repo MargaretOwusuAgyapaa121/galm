@@ -3,6 +3,7 @@ import Navbar from "../components/Nav";
 import Home from "./Home";
 import About from "./About";
 import BookPage from "./BookPage";
+import OrderPage from "./Order";  
 import ServicePage from "./Service";
 import EventsSection from "./Event";
 import JoinUs from "./Join";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<BookPage />} />
+        <Route path="/order" element={<OrderPage />} /> 
         <Route path="/service" element={<ServicePage />} />
         <Route path="/events" element={<EventsSection />} />
         <Route path="/contact" element={<Contact />} />
