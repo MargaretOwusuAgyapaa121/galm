@@ -94,6 +94,7 @@ const Navbar = () => {
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <Link to="/">WELCOME</Link>
           <Link to="/about">ABOUT US</Link>
+          <Link to="/book">BOOK</Link>
           <Link to="/service">SERVICES</Link>
           <Link to="/events">OUR EVENTS</Link>
           <Link to="/join">JOIN CLASS</Link>

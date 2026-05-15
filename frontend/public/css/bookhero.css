@@ -1,0 +1,418 @@
+/* =========================
+   CLASSIC PREMIUM HERO
+========================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.explore-hero{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #050505,
+      #0d0d0d,
+      #111111
+    );
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 7%;
+}
+
+/* =========================
+   SOFT BACKGROUND GLOW
+========================= */
+
+.explore-hero::before{
+  content: "";
+
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  background: rgba(249,115,22,0.08);
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  top: -120px;
+  right: -120px;
+}
+
+.explore-hero::after{
+  content: "";
+
+  position: absolute;
+  width: 400px;
+  height: 400px;
+
+  background: rgba(59,130,246,0.06);
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  bottom: -100px;
+  left: -100px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.explore-container{
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content{
+  flex: 1;
+}
+
+.hero-tag{
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(249,115,22,0.25);
+
+  background: rgba(249,115,22,0.06);
+
+  color: #f59e0b;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  margin-bottom: 28px;
+}
+
+.hero-content h1{
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1.05;
+
+  color: white;
+
+  margin-bottom: 28px;
+
+  font-weight: 800;
+
+  max-width: 650px;
+}
+
+.hero-content h1 span{
+  color: #f59e0b;
+}
+
+.hero-content p{
+  color: #d1d5db;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  max-width: 620px;
+
+  margin-bottom: 40px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+  padding: 16px 34px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.4s ease;
+
+  font-size: 1rem;
+}
+
+.primary-btn{
+  background:
+    linear-gradient(
+      135deg,
+      #f59e0b,
+      #f97316
+    );
+
+  color: white;
+
+  box-shadow:
+    0 10px 30px rgba(249,115,22,0.25);
+}
+
+.primary-btn:hover{
+  transform: translateY(-5px);
+}
+
+.secondary-btn{
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+
+  background: rgba(255,255,255,0.03);
+}
+
+.secondary-btn:hover{
+  border-color: #f59e0b;
+
+  color: #f59e0b;
+}
+
+/* =========================
+   BOOK SHOWCASE
+========================= */
+
+.hero-showcase{
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  min-height: 500px;
+}
+
+/* =========================
+   BOOK CARDS
+========================= */
+
+.book-card{
+  position: relative;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+
+  background: #111;
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.4);
+}
+
+.book-card img{
+  width: 100%;
+  display: block;
+}
+
+/* MAIN BOOK */
+
+.main-book{
+  width: 290px;
+
+  z-index: 5;
+
+  transform: translateY(-20px);
+
+  box-shadow:
+    0 0 40px rgba(59,130,246,0.18);
+}
+
+/* SIDE BOOKS */
+
+.side-book{
+  width: 210px;
+
+  opacity: 0.92;
+}
+
+/* HOVER */
+
+.book-card:hover{
+  transform: translateY(-10px);
+}
+
+/* FLOAT EFFECT */
+
+.main-book{
+  animation: floatMain 5s ease-in-out infinite;
+}
+
+.side-book{
+  animation: floatSide 5s ease-in-out infinite;
+}
+
+@keyframes floatMain{
+
+  0%{
+    transform: translateY(-20px);
+  }
+
+  50%{
+    transform: translateY(-35px);
+  }
+
+  100%{
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatSide{
+
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-12px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media(max-width:1100px){
+
+  .explore-container{
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 60px;
+  }
+
+  .hero-content p{
+    margin-inline: auto;
+  }
+
+  .hero-buttons{
+    justify-content: center;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:768px){
+
+  .explore-hero{
+    padding: 100px 20px;
+  }
+
+  .hero-content h1{
+    font-size: 3rem;
+  }
+
+  .hero-content p{
+    font-size: 1rem;
+  }
+
+  .hero-buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    width: 100%;
+    max-width: 320px;
+
+    text-align: center;
+  }
+
+  .hero-showcase{
+    min-height: 380px;
+
+    gap: 12px;
+  }
+
+  .main-book{
+    width: 200px;
+  }
+
+  .side-book{
+    width: 140px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .explore-hero{
+    padding: 80px 16px;
+  }
+
+  .hero-tag{
+    font-size: 11px;
+  }
+
+  .hero-content h1{
+    font-size: 2.2rem;
+  }
+
+  .hero-content p{
+    font-size: 0.95rem;
+  }
+
+  .hero-showcase{
+    min-height: 280px;
+
+    gap: 8px;
+  }
+
+  .main-book{
+    width: 140px;
+  }
+
+  .side-book{
+    width: 95px;
+  }
+}

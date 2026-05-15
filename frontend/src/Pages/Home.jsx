@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
+import BookShowcase from "../components/Booklaunch";
 import Events from "../components/Event";
 import Slider from "../components/Slide";
 import Slides from "../components/Motion";
@@ -11,6 +12,7 @@ import Slides from "../components/Motion";
     <>
       <Hero />
       <Section />
+      <BookShowcase />
       <Events />
       <Slider />
       <Slides />
