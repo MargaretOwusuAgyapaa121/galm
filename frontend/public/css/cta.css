@@ -1,0 +1,309 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cta-section{
+  position: relative;
+
+  width: 100%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #050505,
+      #0d0d0d,
+      #111111
+    );
+
+  padding: 140px 7%;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.cta-glow{
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  z-index: 1;
+}
+
+.glow-left{
+  width: 500px;
+  height: 500px;
+
+  background: rgba(249,115,22,0.08);
+
+  top: -150px;
+  left: -150px;
+}
+
+.glow-right{
+  width: 420px;
+  height: 420px;
+
+  background: rgba(59,130,246,0.06);
+
+  bottom: -120px;
+  right: -120px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.cta-container{
+  position: relative;
+  z-index: 2;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.cta-tag{
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(249,115,22,0.25);
+
+  background: rgba(249,115,22,0.08);
+
+  color: #f59e0b;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.cta-content h2{
+  font-size: clamp(2.8rem, 6vw, 5rem);
+
+  color: white;
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+
+  font-weight: 800;
+}
+
+.cta-content h2 span{
+  color: #f59e0b;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.cta-content p{
+  color: #d1d5db;
+
+  font-size: 1.1rem;
+
+  line-height: 1.9;
+
+  max-width: 700px;
+
+  margin: auto auto 45px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.cta-buttons{
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  justify-content: center;
+}
+
+/* PRIMARY */
+
+.primary-cta{
+  padding: 16px 36px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+
+  color: white;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 30px rgba(249,115,22,0.25);
+
+  transition: 0.4s ease;
+}
+
+.primary-cta:hover{
+  transform: translateY(-5px);
+}
+
+/* SECONDARY */
+
+.secondary-cta{
+  padding: 16px 36px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+
+  background: rgba(255,255,255,0.03);
+
+  transition: 0.4s ease;
+}
+
+.secondary-cta:hover{
+  border-color: #f59e0b;
+
+  color: #f59e0b;
+
+  transform: translateY(-5px);
+}
+
+/* GHOST */
+
+.ghost-cta{
+  padding: 16px 36px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: #d1d5db;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: transparent;
+
+  transition: 0.4s ease;
+}
+
+.ghost-cta:hover{
+  color: white;
+
+  border-color: rgba(249,115,22,0.25);
+}
+
+/* =========================
+   FLOATING BOOKS (DECOR)
+========================= */
+
+
+
+.book-one{
+  top: 20px;
+  left: 10%;
+}
+
+.book-two{
+  bottom: 40px;
+  left: 20%;
+
+  animation-delay: 1s;
+}
+
+.book-three{
+  top: 60px;
+  right: 15%;
+
+  animation-delay: 2s;
+}
+
+/* FLOAT */
+
+@keyframes floatBook{
+  0%{ transform: translateY(0px); }
+  50%{ transform: translateY(-14px); }
+  100%{ transform: translateY(0px); }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:768px){
+
+  .cta-section{
+    padding: 110px 20px;
+  }
+
+  .cta-content h2{
+    font-size: 3rem;
+  }
+
+  .cta-content p{
+    font-size: 1rem;
+  }
+
+  .floating-book{
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .cta-section{
+    padding: 90px 16px;
+  }
+
+  .cta-tag{
+    font-size: 11px;
+  }
+
+  .cta-content h2{
+    font-size: 2.2rem;
+  }
+
+  .cta-content p{
+    font-size: 0.95rem;
+  }
+
+  .cta-buttons{
+    flex-direction: column;
+  }
+
+  .primary-cta,
+  .secondary-cta,
+  .ghost-cta{
+    width: 100%;
+    max-width: 320px;
+  }
+}
