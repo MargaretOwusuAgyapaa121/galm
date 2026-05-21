@@ -30,7 +30,7 @@ export default function PaymentSection({
 
       amount: total * 100, // kobo
 
-      currency: "GHS",
+      currency: "GHS"  ,
 
       onSuccess: (transaction) => {
         console.log("Payment success:", transaction);
