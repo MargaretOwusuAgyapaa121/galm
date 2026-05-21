@@ -39,7 +39,7 @@ const CTASection = () => {
               Order Your Copy
             </a>
 
-            <a href="/book-launch" className="secondary-cta">
+            <a href="/order" className="secondary-cta">
               Reserve Your Seat
             </a>
 

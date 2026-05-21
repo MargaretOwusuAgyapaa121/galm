@@ -109,16 +109,34 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 34px;
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 20px 60px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
   }
 
   .hero-stats {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hero-stats div {
+    flex: 1 1 100px;
   }
 }
