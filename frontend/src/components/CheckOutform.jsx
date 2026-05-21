@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-
-export default function CheckoutForm({ cart }) {
+export default function CheckoutForm({
+  cart,
+  onContinue,
+}) {
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -9,8 +11,6 @@ export default function CheckoutForm({ cart }) {
     address: "",
     notes: "",
   });
-
-  const [success, setSuccess] = useState(false);
 
   const items = Object.values(cart || {});
 
@@ -28,35 +28,28 @@ export default function CheckoutForm({ cart }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log({
+    // SEND DATA TO ORDER PAGE (PAYMENT FLOW)
+    onContinue({
       customer: form,
       order: items,
       total,
     });
-
-    setSuccess(true);
-
-    setTimeout(() => {
-      setSuccess(false);
-
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        notes: "",
-      });
-    }, 3000);
   };
 
   return (
     <section className="checkout-section">
       <div className="checkout-container">
+
+        {/* LEFT SIDE */}
         <div className="checkout-left">
           <h2>Checkout</h2>
-          <p>Fill in your information to complete your order.</p>
+
+          <p>
+            Fill in your information to complete your order.
+          </p>
 
           <form onSubmit={handleSubmit}>
+
             <input
               type="text"
               name="name"
@@ -100,17 +93,12 @@ export default function CheckoutForm({ cart }) {
             />
 
             <button type="submit">
-              Place Order
+              Continue To Payment
             </button>
           </form>
-
-          {success && (
-            <div className="success-message">
-              Order submitted successfully 🎉
-            </div>
-          )}
         </div>
 
+        {/* RIGHT SIDE */}
         <div className="checkout-right">
           <h3>Order Summary</h3>
 
@@ -127,6 +115,7 @@ export default function CheckoutForm({ cart }) {
                 >
                   <div>
                     <h4>{item.name}</h4>
+
                     <p>
                       ${item.price} × {item.quantity}
                     </p>
@@ -140,6 +129,7 @@ export default function CheckoutForm({ cart }) {
 
               <div className="summary-total">
                 <span>Total</span>
+
                 <strong>${total}</strong>
               </div>
             </>
