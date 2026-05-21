@@ -102,7 +102,7 @@ const BookLaunchEvent = () => {
               Reserve Seat
             </a>
 
-            <a href="/book-launch" className="secondary-launch-btn">
+            <a href="/order" className="secondary-launch-btn">
               Order Books
             </a>
 

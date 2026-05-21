@@ -21,11 +21,11 @@ const ExploreHero = () => {
         </p>
 
         <div className="hero-buttons">
-          <a href="/books" className="primary-btn">
+          <a href="/book" className="primary-btn">
             Explore Books
           </a>
 
-          <a href="/book-launch" className="secondary-btn">
+          <a href="/order" className="secondary-btn">
             Order Now
           </a>
         </div>

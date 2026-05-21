@@ -60,7 +60,7 @@ const BookCollection = () => {
 
               <div className="book-overlay">
 
-                <a href="/book-launch">
+                <a href="/order" className="primary-btn">
                   Order Now
                 </a>
 

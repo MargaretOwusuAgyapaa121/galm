@@ -56,7 +56,7 @@ const FeaturedBook = () => {
           {/* BUTTONS */}
           <div className="featured-buttons">
 
-            <a href="/book-launch" className="order-btn">
+            <a href="/order" className="order-btn">
               Order Now
             </a>
 
