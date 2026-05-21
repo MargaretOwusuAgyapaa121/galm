@@ -87,11 +87,15 @@
   color: black;
 }
 
-.hero-stats {
+/* .hero-stats {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-top: 20px;
+} */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .hero-stats h3 {
