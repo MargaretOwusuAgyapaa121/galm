@@ -20,12 +20,21 @@
   );
 }
 
-.hero-content {
+/* .hero-content {
   position: relative;
   max-width: 900px;
   text-align: center;
   color: white;
   animation: fadeUp 1s ease;
+} */
+ .hero-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  animation: fadeUp 1s ease;
+  z-index: 2;
 }
 
 .hero h1 {
