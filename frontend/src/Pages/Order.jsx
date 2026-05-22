@@ -71,7 +71,7 @@ import React, { useState } from "react";
 
 import HeroSection from "../components/Orderhero";
 import ProductSection from "../components/Productsection";
-import ShoppingCart from "../components/ShoppingCart";
+import ShoppingCart from "../components/Shoppingcart";
 import CheckoutForm from "../components/CheckOutform";
 import PaymentSection from "../components/Handlepayments";
 
