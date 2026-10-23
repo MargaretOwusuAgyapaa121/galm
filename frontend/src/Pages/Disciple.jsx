@@ -171,7 +171,7 @@ const Registration = () => {
     };
 
     const formURL =
-      `https://docs.google.com/forms/d/e/${formID}/formResponse?` +
+      `https://script.google.com/macros/s/AKfycbwvuK0HwUEtP68E1Ft0qCuTgaNZ4kfxwO7Bj9nAwj-iNt9QpQ2bwIKf6JSiTIIWpiuovw/exec` +
       `${entryIDs.firstName}=${encodeURIComponent(formData.firstName)}&` +
       `${entryIDs.lastName}=${encodeURIComponent(formData.lastName)}&` +
       `${entryIDs.dob}=${encodeURIComponent(formData.dob)}&` +
