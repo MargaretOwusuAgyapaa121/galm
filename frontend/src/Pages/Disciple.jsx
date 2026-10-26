@@ -135,10 +135,232 @@
 // export default Registration;
 
 
+// import React, { useState } from "react";
+
+// const Registration = () => {
+//   const [step, setStep] = useState(1);
+//   const [formData, setFormData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     dob: "",
+//     gender: "",
+//     phone: "",
+//     email: "",
+//     address: "",
+//   });
+
+//   // Track changes
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({ ...prev, [name]: value }));
+//   };
+
+//   // Submit to Google Forms
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     const formID = "<YOUR_GOOGLE_FORM_ID>";
+//     const entryIDs = {
+//       firstName: "entry.123456",
+//       lastName: "entry.234567",
+//       dob: "entry.345678",
+//       gender: "entry.456789",
+//       phone: "entry.789012",
+//       email: "entry.567890",
+//       address: "entry.678901",
+//     };
+
+//     const formURL =
+//       `https://script.google.com/macros/s/AKfycbwvuK0HwUEtP68E1Ft0qCuTgaNZ4kfxwO7Bj9nAwj-iNt9QpQ2bwIKf6JSiTIIWpiuovw/exec` +
+//       `${entryIDs.firstName}=${encodeURIComponent(formData.firstName)}&` +
+//       `${entryIDs.lastName}=${encodeURIComponent(formData.lastName)}&` +
+//       `${entryIDs.dob}=${encodeURIComponent(formData.dob)}&` +
+//       `${entryIDs.gender}=${encodeURIComponent(formData.gender)}&` +
+//       `${entryIDs.phone}=${encodeURIComponent(formData.phone)}&` +
+//       `${entryIDs.email}=${encodeURIComponent(formData.email)}&` +
+//       `${entryIDs.address}=${encodeURIComponent(formData.address)}`;
+
+//     const xhr = new XMLHttpRequest();
+//     xhr.open("POST", formURL, true);
+//     xhr.setRequestHeader(
+//       "Content-Type",
+//       "application/x-www-form-urlencoded"
+//     );
+
+//     xhr.onreadystatechange = () => {
+//       if (xhr.readyState === 4) {
+//         alert("Registration submitted. Please verify your Google Form responses.");
+
+//         setFormData({
+//           firstName: "",
+//           lastName: "",
+//           dob: "",
+//           gender: "",
+//           phone: "",
+//           email: "",
+//           address: "",
+//         });
+
+//         setStep(1);
+//       }
+//     };
+
+//     xhr.send();
+//   };
+
+//   // Check if all fields are filled
+//   const isStep1Complete =
+//     formData.firstName.trim() &&
+//     formData.lastName.trim() &&
+//     formData.dob &&
+//     formData.gender &&
+//     formData.phone.trim() &&
+//     formData.email.trim() &&
+//     formData.address.trim();
+
+//   return (
+//     <div className="registration-page">
+//       <div className="registration-header">
+//         <p className="small-title">DISCIPLE CLASS</p>
+//         <h1>Registration</h1>
+//         <p className="description">
+//           The Disciple classes are designed to expand your knowledge about God,
+//           how He works in your life and in our world, giving understanding
+//           to difficult questions of salvation and blessed hope.
+//         </p>
+//       </div>
+
+//       {/* Step Indicator */}
+//       <div className="step-indicator">
+//         <div className={`step ${step >= 1 ? "active" : ""}`}>
+//           <span>1</span>
+//         </div>
+//         <div className="line"></div>
+//         <div className={`step ${step >= 2 ? "active" : ""}`}>
+//           <span>2</span>
+//         </div>
+//       </div>
+
+//       {/* Step 1: Form */}
+//       {step === 1 && (
+//         <div className="registration-content">
+//           <div className="form-section">
+//             <h2>Personal Information</h2>
+
+//             <div className="form-grid">
+//               <input
+//                 name="firstName"
+//                 placeholder="First Name"
+//                 value={formData.firstName}
+//                 onChange={handleChange}
+//                 required
+//               />
+
+//               <input
+//                 name="lastName"
+//                 placeholder="Last Name"
+//                 value={formData.lastName}
+//                 onChange={handleChange}
+//                 required
+//               />
+
+//               <input
+//                 name="dob"
+//                 type="date"
+//                 value={formData.dob}
+//                 onChange={handleChange}
+//                 required
+//               />
+
+//               <select
+//                 name="gender"
+//                 value={formData.gender}
+//                 onChange={handleChange}
+//                 required
+//               >
+//                 <option value="">Select Gender</option>
+//                 <option value="Male">Male</option>
+//                 <option value="Female">Female</option>
+//               </select>
+
+//               <input
+//                 name="phone"
+//                 type="tel"
+//                 placeholder="Phone Number"
+//                 value={formData.phone}
+//                 onChange={handleChange}
+//                 autoComplete="tel"
+//                 required
+//               />
+
+//               <input
+//                 name="email"
+//                 type="email"
+//                 placeholder="Email Address"
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 required
+//               />
+
+//               <input
+//                 name="address"
+//                 placeholder="Residential Address"
+//                 value={formData.address}
+//                 onChange={handleChange}
+//                 autoComplete="street-address"
+//                 required
+//               />
+//             </div>
+
+//             <button
+//               className="next-btn"
+//               disabled={!isStep1Complete}
+//               onClick={() => setStep(2)}
+//             >
+//               Next
+//             </button>
+//           </div>
+//         </div>
+//       )}
+
+//       {/* Step 2: Confirmation */}
+//       {step === 2 && (
+//         <div className="second-step">
+//           <h2>Step 2: Confirmation</h2>
+
+//           <ul>
+//             {Object.entries(formData).map(([key, value]) => (
+//               <li key={key}>
+//                 <strong>
+//                   {key.replace(/^\w/, (c) => c.toUpperCase())}:
+//                 </strong>{" "}
+//                 {value}
+//               </li>
+//             ))}
+//           </ul>
+
+//           <button className="submit-btn" onClick={handleSubmit}>
+//             Submit Registration
+//           </button>
+
+//           <button className="back-btn" onClick={() => setStep(1)}>
+//             Back
+//           </button>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Registration;
+
+
 import React, { useState } from "react";
 
 const Registration = () => {
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -149,66 +371,74 @@ const Registration = () => {
     address: "",
   });
 
+  // Google Apps Script Web App URL
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbwvuK0HwUEtP68E1Ft0qCuTgaNZ4kfxwO7Bj9nAwj-iNt9QpQ2bwIKf6JSiTIIWpiuovw/exec";
+
   // Track changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  // Submit to Google Forms
-  const handleSubmit = (e) => {
+  // Submit registration to Google Sheets via Apps Script
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formID = "<YOUR_GOOGLE_FORM_ID>";
-    const entryIDs = {
-      firstName: "entry.123456",
-      lastName: "entry.234567",
-      dob: "entry.345678",
-      gender: "entry.456789",
-      phone: "entry.789012",
-      email: "entry.567890",
-      address: "entry.678901",
-    };
+    if (isSubmitting) return;
 
-    const formURL =
-      `https://script.google.com/macros/s/AKfycbwvuK0HwUEtP68E1Ft0qCuTgaNZ4kfxwO7Bj9nAwj-iNt9QpQ2bwIKf6JSiTIIWpiuovw/exec` +
-      `${entryIDs.firstName}=${encodeURIComponent(formData.firstName)}&` +
-      `${entryIDs.lastName}=${encodeURIComponent(formData.lastName)}&` +
-      `${entryIDs.dob}=${encodeURIComponent(formData.dob)}&` +
-      `${entryIDs.gender}=${encodeURIComponent(formData.gender)}&` +
-      `${entryIDs.phone}=${encodeURIComponent(formData.phone)}&` +
-      `${entryIDs.email}=${encodeURIComponent(formData.email)}&` +
-      `${entryIDs.address}=${encodeURIComponent(formData.address)}`;
+    setIsSubmitting(true);
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", formURL, true);
-    xhr.setRequestHeader(
-      "Content-Type",
-      "application/x-www-form-urlencoded"
-    );
+    const params = new URLSearchParams({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      dob: formData.dob,
+      gender: formData.gender,
+      phone: formData.phone,
+      email: formData.email,
+      address: formData.address,
+    });
 
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        alert("Registration submitted. Please verify your Google Form responses.");
+    try {
+      // no-cors prevents reading the response, so this confirms only
+      // that the browser sent the request, not that the row was saved.
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: params,
+      });
 
-        setFormData({
-          firstName: "",
-          lastName: "",
-          dob: "",
-          gender: "",
-          phone: "",
-          email: "",
-          address: "",
-        });
+      alert(
+        "Your registration request was sent. Please verify that it appears in Google Sheets."
+      );
 
-        setStep(1);
-      }
-    };
+      setFormData({
+        firstName: "",
+        lastName: "",
+        dob: "",
+        gender: "",
+        phone: "",
+        email: "",
+        address: "",
+      });
 
-    xhr.send();
+      setStep(1);
+    } catch (error) {
+      console.error("Registration error:", error);
+
+      alert(
+        "Unable to send your registration. Please check your internet connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  // Check if all fields are filled
+  // Check whether all fields are filled
   const isStep1Complete =
     formData.firstName.trim() &&
     formData.lastName.trim() &&
@@ -223,6 +453,7 @@ const Registration = () => {
       <div className="registration-header">
         <p className="small-title">DISCIPLE CLASS</p>
         <h1>Registration</h1>
+
         <p className="description">
           The Disciple classes are designed to expand your knowledge about God,
           how He works in your life and in our world, giving understanding
@@ -235,13 +466,15 @@ const Registration = () => {
         <div className={`step ${step >= 1 ? "active" : ""}`}>
           <span>1</span>
         </div>
+
         <div className="line"></div>
+
         <div className={`step ${step >= 2 ? "active" : ""}`}>
           <span>2</span>
         </div>
       </div>
 
-      {/* Step 1: Form */}
+      {/* Step 1: Personal Information */}
       {step === 1 && (
         <div className="registration-content">
           <div className="form-section">
@@ -253,6 +486,7 @@ const Registration = () => {
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={handleChange}
+                autoComplete="given-name"
                 required
               />
 
@@ -261,6 +495,7 @@ const Registration = () => {
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
+                autoComplete="family-name"
                 required
               />
 
@@ -299,6 +534,7 @@ const Registration = () => {
                 placeholder="Email Address"
                 value={formData.email}
                 onChange={handleChange}
+                autoComplete="email"
                 required
               />
 
@@ -313,6 +549,7 @@ const Registration = () => {
             </div>
 
             <button
+              type="button"
               className="next-btn"
               disabled={!isStep1Complete}
               onClick={() => setStep(2)}
@@ -339,11 +576,21 @@ const Registration = () => {
             ))}
           </ul>
 
-          <button className="submit-btn" onClick={handleSubmit}>
-            Submit Registration
+          <button
+            type="button"
+            className="submit-btn"
+            onClick={handleSubmit}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Submitting..." : "Submit Registration"}
           </button>
 
-          <button className="back-btn" onClick={() => setStep(1)}>
+          <button
+            type="button"
+            className="back-btn"
+            onClick={() => setStep(1)}
+            disabled={isSubmitting}
+          >
             Back
           </button>
         </div>
